@@ -1,7 +1,7 @@
 import { config } from './config/config';
 
 const dotenv = require('dotenv');
-import {env} from "./config/environment";
+import { env } from "./config/environment";
 
 dotenv.config();
 

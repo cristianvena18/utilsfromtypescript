@@ -31,13 +31,7 @@ export const config = (route: string, defaultValue: string = null): string => {
     {
         const values = route.split('.');
         values.forEach((value, key) => {
-            if(key == 0)
-            {
-                finalValue = configValues[value];
-            }
-            else{
-                finalValue = finalValue[value];
-            }
+            finalValue = key == 0 ? configValues[value] : finalValue[value];
         });
     }else {
         finalValue = configValues[route];
